@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "224345338813",
+    "firebase_url": "https://codingchallenge-f6225.firebaseio.com",
+    "project_id": "codingchallenge-f6225",
+    "storage_bucket": "codingchallenge-f6225.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224345338813:android:0357bc09a2344a0a",
+        "android_client_info": {
+          "package_name": "ahmed.dev.com.coding_challenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224345338813-84j2anl00958t76abpeeq4c3quhc4kuo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ahmed.dev.com.coding_challenge",
+            "certificate_hash": "022b78ab2a592e77c42119cc5505d3386337bb59"
+          }
+        },
+        {
+          "client_id": "224345338813-nq9jlu7iugof3aj246toa1ikild2m6es.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa8HzAdS_tN2zai01rqMmN65fNUBp6Qhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224345338813-nq9jlu7iugof3aj246toa1ikild2m6es.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
