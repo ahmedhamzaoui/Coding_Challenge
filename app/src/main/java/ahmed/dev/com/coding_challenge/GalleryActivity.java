@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -36,6 +37,9 @@ public class GalleryActivity extends AppCompatActivity implements GalleryAdapter
     private List<Upload> mUploads;
 
     private ProgressBar mProgressCircle;
+
+    private FirebaseAuth mAuth;
+    private String userEmail;
 
 
     @Override
@@ -69,8 +73,10 @@ public class GalleryActivity extends AppCompatActivity implements GalleryAdapter
                 for(DataSnapshot postSnapshot :dataSnapshot.getChildren()){
                     Upload upload = postSnapshot.getValue(Upload.class);
                     upload.setKey(postSnapshot.getKey());
-                    mUploads.add(upload);
 
+                    if(upload.getmUserId().equals(userEmail)) {
+                        mUploads.add(upload);
+                    }
                 }
 
                 mGalleryAdapter.notifyDataSetChanged();
@@ -84,6 +90,8 @@ public class GalleryActivity extends AppCompatActivity implements GalleryAdapter
                 mProgressCircle.setVisibility(View.VISIBLE);
             }
         });
+        mAuth = FirebaseAuth.getInstance();
+        userEmail = mAuth.getCurrentUser().getEmail();
     }
 
     @Override
