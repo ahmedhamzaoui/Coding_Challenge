@@ -81,7 +81,10 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             return;
         }
 
+
+
         progressBar.setVisibility(View.VISIBLE);
+
         mAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
